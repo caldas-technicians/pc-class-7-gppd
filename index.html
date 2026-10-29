@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tiro REST · GET, POST, PUT o DELETE</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@700;900&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="world">
+  <div class="sky"><div class="cloud" style="top:12%;animation-delay:-10s"></div><div class="cloud" style="top:26%;animation-delay:-38s;transform:scale(.7)"></div></div>
+  <div class="mount" style="left:-6vw"></div><div class="mount" style="right:-8vw;height:19vh;width:40vw"></div>
+  <div class="horizon"></div><div class="floor"></div>
+
+  <div class="hud"><div class="pill" id="hProg">Caso 0/0</div><div class="pill y" id="hScore">0 pts</div><div class="pill" id="hStreak">Racha 0</div></div>
+  <div class="case"><div class="time" id="time">15</div><small>¿Qué método HTTP usarías?</small><p id="qtext">…</p><div class="bar" id="bar"><i></i></div></div>
+  <div class="msg" id="msg"></div>
+
+  <div class="row" id="row"></div>
+</div>
+
+<div class="gunwrap" id="gw"><div class="gun" id="gun">
+<svg viewBox="0 0 250 110">
+ <polygon id="flash" points="238,55 262,28 252,50 285,55 252,60 262,82" fill="#ffd23f" stroke="#ff7a1a" stroke-width="4"/>
+ <rect x="150" y="38" width="88" height="20" rx="5" fill="#59d0ff" stroke="#1b1340" stroke-width="6"/>
+ <path d="M30 32h140v34H96l-10 10H30z" fill="#7a5cff" stroke="#1b1340" stroke-width="6" stroke-linejoin="round"/>
+ <rect x="60" y="40" width="90" height="8" rx="4" fill="#ffd23f"/>
+ <path d="M34 66h50l-12 40H40z" fill="#ff5ca8" stroke="#1b1340" stroke-width="6" stroke-linejoin="round"/>
+ <path d="M92 70q8 18 24 8" fill="none" stroke="#1b1340" stroke-width="6" stroke-linecap="round"/>
+ <rect x="20" y="22" width="16" height="12" fill="#ffd23f" stroke="#1b1340" stroke-width="5"/>
+</svg></div></div>
+<div class="cross" id="cross"></div>
+
+<div class="screen" id="menu"><div class="card">
+  <h1>TIRO REST</h1>
+  <div class="legend"><b class="GET">GET</b><b class="POST">POST</b><b class="PUT">PUT</b><b class="DELETE">DELETE</b></div>
+  <p>Lee el caso y dispara al cubo del método HTTP correcto. Tienes 15 segundos por caso; si se acaba el tiempo, pasas al siguiente.</p>
+  <button class="btn b" data-n="10">Modo rápido: 10 casos al azar</button>
+  <button class="btn p" data-n="20">Modo medio: 20 casos al azar de 50</button>
+  <button class="btn" data-n="50">Modo completo: 50 casos</button>
+</div></div>
+<div class="screen hide" id="end"><div class="card">
+  <h1 id="eTitle">¡LISTO!</h1>
+  <p id="eStats"></p>
+  <button class="btn b" id="again">Jugar de nuevo</button>
+</div></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
